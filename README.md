@@ -118,13 +118,12 @@ If you want to test it locally, configure the appropiate vaiables pointing to th
 
 ```shell
 export KAFKA_BOOTSTRAP_URLS=localhost:9092 \
-STREAM_URL=http://localhost:8081/dashboard/stream \
 PGSQL_URL="jdbc:postgresql://localhost:5432/analysisdb?currentSchema=analysis" \
 PGSQL_USER="analysisadmin" \
 PGSQL_PASS="analysispassword"
 ```
 
 ```shell
-podman run -i --network="host" -e PGSQL_URL=${PGSQL_URL} -e PGSQL_USER=${PGSQL_USER} -e PGSQL_PASS=${PGSQL_PASS} -e KAFKA_BOOTSTRAP_URLS=${KAFKA_BOOTSTRAP_URLS}  -e STREAM_URL=${STREAM_URL} <<REGISTRY>>/analysis-core:<<VERSION>>
+podman run -i --network="host" -e PGSQL_URL=${PGSQL_URL} -e PGSQL_USER=${PGSQL_USER} -e PGSQL_PASS=${PGSQL_PASS} -e KAFKA_BOOTSTRAP_URLS=${KAFKA_BOOTSTRAP_URLS}   <<REGISTRY>>/analysis-core:<<VERSION>>
 ```
 
