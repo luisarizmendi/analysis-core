@@ -29,7 +29,7 @@ public class KafkaService {
     @Transactional
     public void orderIn(final PlaceOrderCommand placeOrderCommand) {
 
-        logger.debug("PlaceOrderCommand received: {}", placeOrderCommand);
+        logger.debug("PlaceOrderCommand received from Kafka: {}", placeOrderCommand);
         orderService.onOrderIn(placeOrderCommand);
     }
 
