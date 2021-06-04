@@ -1,0 +1,3 @@
+[submodule "src/main/java/org/larizmen/analysis/domain"]
+	path = src/main/java/org/larizmen/analysis/domain
+	url = https://github.com/luisarizmendi/analysis-domain
