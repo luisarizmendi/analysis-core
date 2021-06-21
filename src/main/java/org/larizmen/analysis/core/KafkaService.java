@@ -1,13 +1,10 @@
 package org.larizmen.analysis.core;
 
-import org.larizmen.analysis.domain.PlaceOrderCommand;
-import org.larizmen.analysis.domain.ProcessTicket;
+import org.larizmen.analysis.domain.*;
 
 import io.smallrye.reactive.messaging.annotations.Blocking;
 
 import org.eclipse.microprofile.reactive.messaging.Incoming;
-
-
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,7 +25,6 @@ public class KafkaService {
     @Blocking
     @Transactional
     public void orderIn(final PlaceOrderCommand placeOrderCommand) {
-
         logger.debug("PlaceOrderCommand received: {}", placeOrderCommand);
         orderService.onOrderIn(placeOrderCommand);
     }
@@ -41,4 +37,5 @@ public class KafkaService {
         logger.debug("ProcessTicket received: {}", processTicket);
         orderService.onOrderUp(processTicket);
     }
+
 }
