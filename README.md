@@ -17,6 +17,15 @@ If you want to learn more about Quarkus, please visit its website: https://quark
 __NOTE__: You have to install the domain objects to run the services and the test utilities to run the tests. 
 
 
+
+### Updating submodules
+
+If you want to pull the latest commits of the domain repository, you can just run:
+
+```
+git submodule update --remote --merge
+```
+
 ### Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
